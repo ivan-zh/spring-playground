@@ -1,11 +1,9 @@
 package z.ivan.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Service;
 import z.ivan.dao.UserDao;
 import z.ivan.entity.User;
-
 import java.util.List;
 
 @Service
@@ -19,6 +17,10 @@ public class UserService {
 
     public UserService(UserDao userDao) {
         this.repository = userDao;
+    }
+
+    public User getById(int id) {
+        return repository.getById(id);
     }
 
     public List<User> fetch() {

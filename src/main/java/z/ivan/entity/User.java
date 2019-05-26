@@ -1,6 +1,5 @@
 package z.ivan.entity;
 
-import java.sql.Timestamp;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 

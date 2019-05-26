@@ -2,6 +2,7 @@ package z.ivan.dao;
 
 import org.springframework.stereotype.Repository;
 import z.ivan.entity.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,5 +25,9 @@ public class UserDao {
 
     public void cleanUp() {
         users.clear();
+    }
+
+    public User getById(int id) {
+        return users.get(id - 1);
     }
 }
